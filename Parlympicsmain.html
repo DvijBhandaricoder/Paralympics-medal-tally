@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paralympics</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: beige;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: blue;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        nav.scrolled {
+            background-color: #004a7c;
+        }
+
+        nav .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+        }
+
+        nav .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #175308;
+            color: white;
+        }
+
+        .section {
+            padding: 4rem 1.5rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            text-align: center;
+        }
+
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .dark-section {
+            background-color: #333;
+            color: white;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-item {
+            transition: transform 0.5s ease-in-out;
+            width: 1500px;
+            height: 999px;
+        }
+        #home, #about {
+            background-size: cover;
+            background-position: center;
+            color: rgb(20, 18, 143);
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+
+        #home {
+            background-image: url(Paralympicssss.jpg);
+        }
+
+        #about {
+            background-image: url(Paralympicssss.jpg);
+        }
+        .cards_image {
+            padding: 10px;
+            height: 350px;
+            width: 250px;
+            border-bottom: 4px solid rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="dvijolympicslogo.png" alt="Website Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="album.html">Album</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Paralympics
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#paralympics-about">About</a></li>
+                            <li><a class="dropdown-item" href="#paralympics-medal-tally">Medal Tally</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="PlayerCards.html">Stars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="">Medal Tally</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section visible">
+        <h2>Welcome to the world's best place to know about the Paralympics.</h2>
+        <p> Welcome to the unofficial Paralympics website!
+             Here, we bring you closer to the inspiring world of athletes who redefine the limits of possibility. 
+             As you explore, you’ll discover the stories, events, and triumphs that showcase the power of determination, resilience, and inclusion. 
+             We’re excited to share this journey with you, where together, we can celebrate the incredible achievements of Paralympians from around the globe. Dive into the latest news, explore upcoming events, and get ready to be inspired by the strength of the human spirit.
+             We're thrilled to have you with us!
+        </p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section dark-section visible">
+        <h2>About the Paralympics</h2>
+        <p>  The Paralympic Games are a celebration of human potential,
+             where we witness athletes with disabilities defying expectations and pushing boundaries.
+             Since its inception in 1960, the Paralympics has grown into one of the largest sporting events,
+             held alongside the Olympics. As you watch these incredible athletes compete across a variety of sports,
+             from athletics to wheelchair basketball, you're reminded of the strength, resilience, and determination that define the human spirit. The Paralympics unite us, showing that together, we can break barriers, champion diversity,
+             and embrace the limitless possibilities of what we can achieve.
+        </p>
+    </section>
+
+    <!-- Album Section (Image Carousel) -->
+    <section id="album" class="section visible">
+        <h2>Glimpses from the Paralympics</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="PARASWIMMING.jpg" class="d-block w-100" alt="Athlete 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="PARARACING.webp" class="d-block w-100" alt="Athlete 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="Paris 2024 Opening Ceremony  pyro show.jpg" class="d-block w-100" alt="Athlete 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="winners.jpg" class="d-block w-100" alt="Athlete 4">
+                </div>
+                <div class="carousel-item">
+                    <img src="fansccheer.jpg" class="d-block w-100" alt="Athlete 5">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Stars Section -->
+    <section id="stars" class="section dark-section visible">
+        <h2 style="padding: 5px;">Famous Paralympians</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card" style="background-color: orchid;">
+                    <img src="Tatyana.jpg" alt="" class="cards_image">
+                    <h3>Tatyana McFadden</h3>
+                    <p>Wheelchair Racing - USA</p>
+                    <p>Tatyana McFadden is a wheelchair racer from the United States who has won multiple gold medals in the Paralympic Games. She is known for her incredible speed and endurance, making her one of the most successful athletes in the sport.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card" style="background-color: orchid;">
+                    <img src="DanielDias.jfif" alt="" class="cards_image">
+                    <h3>Daniel Dias</h3>
+                    <p>Swimming - Brazil</p>
+                    <p>Daniel Dias is a Brazilian swimmer who has achieved remarkable success in the pool, winning numerous gold medals at the Paralympic Games. His achievements have made him a leading figure in the swimming world.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card" style="background-color: orchid;">
+                    <img src="Jonnie_Peacock.jpg" alt="" class="cards_image">
+                    <h3>Jonnie Peacock</h3>
+                    <p>Sprinter - UK</p>
+                    <p>Jonnie Peacock is a British sprinter known for his remarkable performances in the 100 meters. With multiple gold medals and world records to his name, he has become a symbol of speed and resilience.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card" style="background-color: orchid;">
+                    <img src="BeatriceVio.jpeg" alt="" class="cards_image">
+                    <h3>Beatrice Vio</h3>
+                    <p>Fencing - Italy</p>
+                    <p>Beatrice Vio, also known as "Bebe," is an Italian wheelchair fencer who has made a name for herself with her exceptional skills and determination. She has won several Paralympic gold medals and continues to inspire with her competitive spirit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="paralympics-about" class="section" style="background-image: url(Indiakijaiho.jfif);">
+        <h2>India's achievements at the Paralympics</h2>
+        <ul>
+            <li></li>
+        </ul>
+        
+    </div>
+
+    <footer>
+        <p>For further exploration, please go back to the home page!</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olympics 2024 Medal Tally</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: navy;
+    }
+
+    .hero-section {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+    }
+
+    .table thead {
+      background-color: #343a40;
+      color: white;
+    }
+
+    .table tbody tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .table tbody tr:nth-child(odd) {
+      background-color: #fff;
+    }
+
+    .search-bar {
+      margin-bottom: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: silver;
+    }
+
+    .scroll-section {
+      height: 500px;
+      overflow-y: auto;
+    }
+
+    .country-flag {
+      width: 22px;
+      height: 16px;
+      margin-right: 10px;
+    }
+    footer {
+      width: auto;
+      background-color: beige;
+      color: rgb(238, 30, 30);
+      height: 50px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: large;
+      text-align: center;
+    
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="dvijolympicslogo.png" alt="Olympics Logo" width="40" height="40">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="album.html" target="_blank">Album</a></li>
+          <li class="nav-item"><a class="nav-link" href="PlayerCards.html" target="_blank">Stars</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="paralympicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Paralympics
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="paralympicsDropdown">
+              <li><a class="dropdown-item" href="Parlympicsmain.html" target="_blank">About</a></li>
+              <li><a class="dropdown-item" href="#" target="_blank">Medal Tally</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="MedalTally.html" target="_blank">Olympics Medal Tally</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section text-center">
+    <h1 class="display-4">Olympics 2024 Medal Tally</h1>
+    <p class="lead">Track the progress of all nations participating in the 2024 Olympics.</p>
+  </section>
+
+  <div class="search-bar">
+    <input type="text" id="countrySearch" class="form-control" placeholder="Search for a country...">
+  </div>
+  <div class="container">
+    <div class="scroll-section">
+      <table class="table table-bordered text-center" style="background-color: silver;">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Country</th>
+            <th>Gold</th>
+            <th>Silver</th>
+            <th>Bronze</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody id="medalTableBody">
+          <tr>
+            <td>1</td>
+            <td><img class="country-flag" src="USA.png" alt="Flag">United States</td>
+            <td>40</td>
+            <td>44</td>
+            <td>42</td>
+            <td>126</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><img class="country-flag" src="China.png" alt="China Flag">China</td>
+            <td>40</td>
+            <td>27</td>
+            <td>24</td>
+            <td>91</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td><img class="country-flag" src="Japan.png" alt="Japan Flag">Japan</td>
+            <td>20</td>
+            <td>12</td>
+            <td>13</td>
+            <td>45</td>
+          </tr>
+           <tr>
+            <td>4</td>
+            <td><img class="country-flag" src="Australia.png" alt="Flag">Australia</td>
+            <td>18</td>
+            <td>19</td>
+            <td>16</td>
+            <td>53</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><img class="country-flag" src="France.png" alt="Flag">France</td>
+            <td>16</td>
+            <td>26</td>
+            <td>22</td>
+            <td>64</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><img class="country-flag" src="Netherlands.png" alt="Flag">Netherlands</td>
+            <td>15</td>
+            <td>7</td>
+            <td>12</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><img class="country-flag" src="Great Britain.png" alt="Flag">Great Britain</td>
+            <td>14</td>
+            <td>22</td>
+            <td>29</td>
+            <td>65</td>
+          </tr>
+          <tr>
+            <td>8</td>
+            <td><img class="country-flag" src="South Korea.png" alt="Flag">South Korea</td>
+            <td>13</td>
+            <td>9</td>
+            <td>10</td>
+            <td>32</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td><img class="country-flag" src="Italy.png" alt="Flag">Italy</td>
+            <td>12</td>
+            <td>13</td>
+            <td>15</td>
+            <td>40</td>
+          </tr>
+          <tr>
+            <td>10</td>
+            <td><img class="country-flag" src="Germany.png" alt="Flag">Germany</td>
+            <td>12</td>
+            <td>13</td>
+            <td>8</td>
+            <td>33</td>
+          </tr>
+          <tr>
+            <td>11</td>
+            <td><img class="country-flag" src="New Zealand.png" alt="Flag">New Zealand</td>
+            <td>10</td>
+            <td>7</td>
+            <td>3</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td><img class="country-flag" src="Cnada.png" alt="Flag">Canada</td>
+            <td>9</td>
+            <td>7</td>
+            <td>11</td>
+            <td>27</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td><img class="country-flag" src="Uzbekistan.png" alt="Flag">Uzbekistan</td>
+            <td>8</td>
+            <td>3</td>
+            <td>3</td>
+            <td>13</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td><img class="country-flag" src="Hungary.png" alt="Flag">Hungary</td>
+            <td>6</td>
+            <td>7</td>
+            <td>6</td>
+            <td>19</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td><img class="country-flag" src="Spain.png" alt="Flag">Spain</td>
+            <td>5</td>
+            <td>4</td>
+            <td>9</td>
+            <td>18</td>
+          </tr>
+          <tr>
+            <td>16</td>
+            <td><img class="country-flag" src="Sweden.png" alt="Flag">Sweden</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>17</td>
+            <td><img class="country-flag" src="Kenya.png" alt="Flag">Kenya</td>
+            <td>4</td>
+            <td>2</td>
+            <td>5</td>
+            <td>11</td>
+          </tr>
+          <tr>
+            <td>18</td>
+            <td><img class="country-flag" src="Norway.png" alt="Flag">Norway</td>
+            <td>4</td>
+            <td>1</td>
+            <td>3</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>19</td>
+            <td><img class="country-flag" src="Ireland.png" alt="Flag">Ireland</td>
+            <td>4</td>
+            <td>0</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>20</td>
+            <td><img class="country-flag" src="Brazil.png" alt="Flag">Brazil</td>
+            <td>3</td>
+            <td>7</td>
+            <td>10</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>21</td>
+            <td><img class="country-flag" src="Iran.png" alt="Flag">Iran</td>
+            <td>3</td>
+            <td>6</td>
+            <td>3</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>22</td>
+            <td><img class="country-flag" src="Ukraine.png" alt="Flag">Ukraine</td>
+            <td>3</td>
+            <td>5</td>
+            <td>4</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <td>23</td>
+            <td><img class="country-flag" src="Romania.png" alt="Flag">Romania</td>
+            <td>3</td>
+            <td>4</td>
+            <td>2</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>24</td>
+            <td><img class="country-flag" src="Georgia.png" alt="Flag">Georgia</td>
+            <td>3</td>
+            <td>3</td>
+            <td>1</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>25</td>
+            <td><img class="country-flag" src="Belgium.png" alt="Flag">Belgium</td>
+            <td>3</td>
+            <td>1</td>
+            <td>6</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>26</td>
+            <td><img class="country-flag" src="Bulgaria.png" alt="Flag">Bulgaria</td>
+            <td>3</td>
+            <td>1</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>27</td>
+            <td><img class="country-flag" src="Serbia.png" alt="Flag">Serbia</td>
+            <td>3</td>
+            <td>1</td>
+            <td>1</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>28</td>
+            <td><img class="country-flag" src="Czechia.png" alt="Flag">Czechia</td>
+            <td>3</td>
+            <td>0</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>29</td>
+            <td><img class="country-flag" src="Denmark.png" alt="Flag">Denmark</td>
+            <td>2</td>
+            <td>2</td>
+            <td>5</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td><img class="country-flag" src="Azerbaijan.png" alt="Flag">Azerbaijan</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>30</td>
+            <td><img class="country-flag" src="Croatia.png" alt="Flag">Croatia</td>
+            <td>2</td>
+            <td>2</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>32</td>
+            <td><img class="country-flag" src="Cuba.png" alt="Flag">Cuba</td>
+            <td>2</td>
+            <td>1</td>
+            <td>6</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>33</td>
+            <td><img class="country-flag" src="Bahrain.png" alt="Flag">Bahrain</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>34</td>
+            <td><img class="country-flag" src="Slovenia.png" alt="Flag">Slovenia</td>
+            <td>2</td>
+            <td>1</td>
+            <td>0</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>35</td>
+            <td><img class="country-flag" src="Chinese taipei.png" alt="Flag">Chinese Taipei</td>
+            <td>2</td>
+            <td>0</td>
+            <td>5</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>36</td>
+            <td><img class="country-flag" src="Austria.png" alt="Flag">Austria</td>
+            <td>2</td>
+            <td>0</td>
+            <td>3</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td><img class="country-flag" src="HongKong.png" alt="Flag">Hong Kong, China</td>
+            <td>2</td>
+            <td>0</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>37</td>
+            <td><img class="country-flag" src="phillipines.png" alt="Flag">Phillippines</td>
+            <td>2</td>
+            <td>0</td>
+            <td>2</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td><img class="country-flag" src="Algeria.png" alt="Flag">Algeria</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>39</td>
+            <td><img class="country-flag" src="Indonesia.png" alt="Flag">Indonesia</td>
+            <td>2</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>41</td>
+            <td><img class="country-flag" src="Israel.png" alt="Flag">Israel</td>
+            <td>1</td>
+            <td>5</td>
+            <td>1</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>42</td>
+            <td><img class="country-flag" src="Poland.png" alt="Flag">Poland</td>
+            <td>1</td>
+            <td>4</td>
+            <td>5</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>43</td>
+            <td><img class="country-flag" src="kazakhstan.png" alt="Flag">Kazakhstan</td>
+            <td>1</td>
+            <td>3</td>
+            <td>3</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td><img class="country-flag" src="Jamaica.png" alt="Flag">Jamaica</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td><img class="country-flag" src="SouthAfrica.png" alt="Flag">South Africa</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>44</td>
+            <td><img class="country-flag" src="Thailand.png" alt="Flag">Thailand</td>
+            <td>1</td>
+            <td>3</td>
+            <td>2</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>47</td>
+            <td><img class="country-flag" src="Eithiopia.png" alt="Flag">Ethiopia</td>
+            <td>1</td>
+            <td>3</td>
+            <td>0</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>48</td>
+            <td><img class="country-flag" src="Swiss.png" alt="Flag">Switzerland</td>
+            <td>1</td>
+            <td>2</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>49</td>
+            <td><img class="country-flag" src="Ecuador.png" alt="Flag">Ecuador</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>50</td>
+            <td><img class="country-flag" src="Portugal.png" alt="Flag">Portugal</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>51</td>
+            <td><img class="country-flag" src="Greece.png" alt="Flag">Greece</td>
+            <td>1</td>
+            <td>1</td>
+            <td>6</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td><img class="country-flag" src="Argentina.png" alt="Flag">Argentina</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td><img class="country-flag" src="Egypt.png" alt="Flag">Egypt</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>52</td>
+            <td><img class="country-flag" src="Tunisia.png" alt="Flag">Tunisia</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td><img class="country-flag" src="Botswana.png" alt="Flag">Botswana</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td><img class="country-flag" src="Saint.png" alt="Flag">Saint Lucia</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>55</td>
+            <td><img class="country-flag" src="Uganda.png" alt="Flag">Uganda</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>59</td>
+            <td><img class="country-flag" src="Dominican.png" alt="Flag">Dominican Republic</td>
+            <td>1</td>
+            <td>0</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td><img class="country-flag" src="Guatemala.png" alt="Flag">Guatemala</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>60</td>
+            <td><img class="country-flag" src="Morocco.png" alt="Flag">Morocco</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td><img class="country-flag" src="Dominica.png" alt="Flag">Dominica</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>62</td>
+            <td><img class="country-flag" src="Pakistan.png" alt="Flag">Pakistan</td>
+            <td>1</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>64</td>
+            <td><img class="country-flag" src="Turkey.png" alt="Flag">Turkey</td>
+            <td>0</td>
+            <td>3</td>
+            <td>5</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>65</td>
+            <td><img class="country-flag" src="Mexicana.png" alt="Flag">Mexico</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td><img class="country-flag" src="Armenia.png" alt="Flag">Armenia</td>
+            <td>0</td>
+            <td>3</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>66</td>
+            <td><img class="country-flag" src="Colombua.png" alt="Flag">Colombia</td>
+            <td>0</td>
+            <td>3</td>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td><img class="country-flag" src="Kyrgyzstan.png" alt="Flag">Kyrgyztan</td>
+            <td>0</td>
+            <td>2</td>
+            <td>4</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>68</td>
+            <td><img class="country-flag" src="NK.png" alt="Flag">North Korea</td>
+            <td>0</td>
+            <td>2</td>
+            <td>4</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>70</td>
+            <td><img class="country-flag" src="Lithuania.png" alt="Flag">Lithuania</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>71</td>
+            <td><img class="country-flag" src="India.jfif" alt="Flag"><strong>India</strong></td>
+            <td>0</td>
+            <td>1</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>72</td>
+            <td><img class="country-flag" src="Moldova.png" alt="Flag">Republic of Moldova</td>
+            <td>0</td>
+            <td>1</td>
+            <td>3</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>73</td>
+            <td><img class="country-flag" src="Kosovo.png" alt="Flag">Kosovo</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td><img class="country-flag" src="Cyprus.png" alt="Flag">Cyprus</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td><img class="country-flag" src="Fiji.png" alt="Flag">Fiji</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td><img class="country-flag" src="Jordan.png" alt="Flag">Jordan</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td><img class="country-flag" src="Mongolia.png" alt="Flag">Mongolia</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>74</td>
+            <td><img class="country-flag" src="Panama.png" alt="Flag">Panama</td>
+            <td>0</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>79/td>
+            <td><img class="country-flag" src="Tajikistan.png" alt="Flag">Tajikistan</td>
+            <td>0</td>
+            <td>0</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td><img class="country-flag" src="Albania.png" alt="Flag">Albania</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td><img class="country-flag" src="Grenada.png" alt="Flag">Grenada</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td><img class="country-flag" src="Malaysua.png" alt="Flag">Malaysia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td><img class="country-flag" src="PUerto rico.jfif" alt="Flag">Puerto Rico</td>
+            <td>0</td>
+            <td>0</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Cote.png" alt="Flag">Côte d'Ivoire</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Capeverde.png" alt="Flag">Cape Verde</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="ROT.png" alt="Flag">Refugee Olympic Team</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Peru.png" alt="Flag">Peru</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Qatar.png" alt="Flag">Qatar</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Singapore.png" alt="Flag">Singapore</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Slovakia.png" alt="Flag">Slovakia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>84</td>
+            <td><img class="country-flag" src="Zambia.png" alt="Flag">Zambia</td>
+            <td>0</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const searchInput = document.getElementById('countrySearch');
+    const tableRows = document.querySelectorAll('#medalTableBody tr');
+
+    searchInput.addEventListener('input', function() {
+      const searchValue = searchInput.value.toLowerCase();
+      tableRows.forEach(row => {
+        const countryCell = row.querySelector('td:nth-child(2)').innerText.toLowerCase();
+        if (countryCell.includes(searchValue)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  </script>
+  <footer>
+    For further exploring the website, let's go back to the home page
+  </footer>
+
+</body>
+</html>

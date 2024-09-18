@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olympic Players</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            padding: 0;
+            margin: 0;
+        }
+        header {
+            background-color: #004aad;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 36px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        .player-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+            width: calc(25% - 20px); /* 4 cards per row with gap */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .card:hover img {
+            transform: scale(1.1); /* Zoom effect */
+        }
+        .card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            font-size: 22px;
+            color: #004aad;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .card .country {
+            font-size: 14px;
+            color: #999;
+        }
+        .card button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #004aad;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .card button:hover {
+            background-color: #002f6c;
+        }
+        footer {
+            background-color: #004aad;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Stars at the Olympics 2024
+</header>
+
+<div class="container">
+    <div class="player-cards">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="Neerajchopra.jpg" alt="Neeraj Chopra">
+            <div class="card-content">
+                <h3>Neeraj Chopra</h3>
+                <p>Country: India</p>
+                <p class="country">Sport: Javelin Throw</p>
+                <a href="NeerajChoprainfopage.html" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="SimeoneBiles.jpg" alt="Simeone Biles">
+            <div class="card-content">
+                <h3>Simeone Biles</h3>
+                <p>Country: USA</p>
+                <p class="country">Sport: Gymnastics</p>
+                <a href="Simeonebilesinfo.html" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="Kim.jfif" alt="Kim Woo-jin">
+            <div class="card-content">
+                <h3>Kin woo-jin</h3>
+                <p>Country: South Korea</p>
+                <p class="country">Sport: Archery</p>
+                <a href="Kimwoojinwebpage.html" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="PauCubarsi.jfif" alt="Pau Coubarsi">
+            <div class="card-content">
+                <h3>Pau Cubarsi</h3>
+                <p>Country: Spain</p>
+                <p class="country">Sport: Soccer</p>
+                <a href="https://en.wikipedia.org/wiki/Pau_Cubars%C3%AD" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+            <img src="Camevoy.jfif" alt="Cameron McEvoy">
+            <div class="card-content">
+                <h3>Cameron McEvoy</h3>
+                <p>Country: Australia</p>
+                <p class="country">Sport: Swimming</p>
+                <a href="https://en.wikipedia.org/wiki/Cameron_McEvoy" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="card">
+            <img src="Armand.jfif" alt="Armand Duplantis">
+            <div class="card-content">
+                <h3>Armand Duplantis</h3>
+                <p>Country: Sweden</p>
+                <p class="country">Sport: Pole Vaulting</p>
+                <a href="https://en.wikipedia.org/wiki/Armand_Duplantis" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="card">
+            <img src="Marcell.jfif" alt="Marcell Jacobs">
+            <div class="card-content">
+                <h3>Marcell Jacobs</h3>
+                <p>Country: Italy</p>
+                <p class="country">Sport: Sprinter </p>
+                <a href="https://en.wikipedia.org/wiki/Marcell_Jacobs" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 8 -->
+        <div class="card">
+            <img src="Remco.jfif" alt="Remco Evenepoel">
+            <div class="card-content">
+                <h3>Remco Evenepoel</h3>
+                <p>Country: Belgium</p>
+                <p class="country">Sport: Cycling</p>
+                <a href="https://en.wikipedia.org/wiki/Remco_Evenepoel" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 9 -->
+        <div class="card">
+            <img src="Yaroslava.jfif" alt="Yaroslava Mahuchikh">
+            <div class="card-content">
+                <h3>Yaroslava Mahuchikh</h3>
+                <p>Country: Ukraine</p>
+                <p class="country">Sport: Long Jump</p>
+                <a href="https://en.wikipedia.org/wiki/Yaroslava_Mahuchikh" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 10 -->
+        <div class="card">
+            <img src="PRS.jfif" alt="PR Sreejesh">
+            <div class="card-content">
+                <h3>PR Sreejesh</h3>
+                <p>Country: India</p>
+                <p class="country">Sport: Field Hockey</p>
+                <a href="https://en.wikipedia.org/wiki/Portia_Woodman" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 11 -->
+        <div class="card">
+            <img src="FanZhendong.jfif" alt="Fan Zhendong">
+            <div class="card-content">
+                <h3>Fan Zhendong</h3>
+                <p>Country: China</p>
+                <p class="country">Sport: Table Tennis</p>
+                <a href="https://en.wikipedia.org/wiki/Fan_Zhendong" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 12 -->
+        <div class="card">
+            <img src="RazambekZhamalov.jfif" alt="Razambek Zhamalov">
+            <div class="card-content">
+                <h3>PRazambek Zhamalov</h3>
+                <p>Country: Uzbekistan</p>
+                <p class="country">Sport: Freestyle Wrestling</p>
+                <a href="https://en.wikipedia.org/wiki/Razambek_Zhamalov" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 13 -->
+        <div class="card">
+            <img src="Yusuf.jfif" alt="Yusuf Dikec">
+            <div class="card-content">
+                <h3>Yusuf Dikec</h3>
+                <p>Country: Turkey</p>
+                <p class="country">Sport: Shooting</p>
+                <a href="https://en.wikipedia.org/wiki/Yusuf_Dike%C3%A7" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 14 -->
+        <div class="card">
+            <img src="Viktor.jfif" alt="Viktor Axelsen">
+            <div class="card-content">
+                <h3>Viktor Axelsen</h3>
+                <p>Country: Denmark</p>
+                <p class="country">Sport: Badminton</p>
+                <a href="https://en.wikipedia.org/wiki/Viktor_Axelsen" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 15 -->
+        <div class="card">
+            <img src="NoahLyles.jfif" alt="Noah Lyles">
+            <div class="card-content">
+                <h3>Noah Lyles</h3>
+                <p>Country: USA</p>
+                <p class="country">Sport: Sprinting</p>
+                <a href="https://en.wikipedia.org/wiki/Noah_Lyles" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 16 -->
+        <div class="card">
+            <img src="Tamirat.jfif" alt="Tamirat Tola">
+            <div class="card-content">
+                <h3>Tamirat Tola</h3>
+                <p>Country: Ethiopia</p>
+                <p class="country">Sport: Marathon</p>
+                <a href="https://en.wikipedia.org/wiki/Tamirat_Tola" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 17 -->
+        <div class="card">
+            <img src="Portia.jfif" alt="Portia Woodman">
+            <div class="card-content">
+                <h3>Portia Woodman</h3>
+                <p>Country: New Zealand</p>
+                <p class="country">Sport: Rugby</p>
+                <a href="https://en.wikipedia.org/wiki/Portia_Woodman" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 18 -->
+        <div class="card">
+            <img src="Vivian.jfif" alt="Vivian Kong">
+            <div class="card-content">
+                <h3>Vivian Kong</h3>
+                <p>Country: Hong Kong</p>
+                <p class="country">Sport: Fencing</p>
+                <a href="" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 19 -->
+        <div class="card">
+            <img src="Novak.jfif" alt="Novak Djokovic">
+            <div class="card-content">
+                <h3>Novak Djokovic</h3>
+                <p>Country: Serbia</p>
+                <p class="country">Sport: Tennis</p>
+                <a href="https://en.wikipedia.org/wiki/Novak_Djokovic" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+        <!-- Card 20 -->
+        <div class="card">
+            <img src="Lauren.jfif" alt="Lauren Price">
+            <div class="card-content">
+                <h3>Lauren Price</h3>
+                <p>Country: UK</p>
+                <p class="country">Sport: Boxing</p>
+                <a href="https://en.wikipedia.org/wiki/Lauren_Price" target="_blank"><button>Know More</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <h3>For further exploring the website, please go back to the home page</h3>
+</footer>
+
+</body>
+</html>
